@@ -1,0 +1,182 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:floralwhite;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.button-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    padding-bottom: 14px;
+}
+
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    color:blueviolet;
+
+}
+
+.heading-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.description {
+    width: 360px;
+}
+
+
+.change-number-squares,
+.clear-colors {
+    background-color: #3882F6;
+    color: white;
+    padding: 6px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    width: 380px;
+    
+}
+
+
+
+/*freezes the background when dialog modal is open*/
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+
+
+.modal-box {
+    padding: 24px;
+    border: 8px solid lightgray;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+
+.modal::backdrop {
+    background-color: lightgray;
+    backdrop-filter: blur(3px);
+}
+
+/*I thought it's a bug that when I press Esc to close the modal, the trigger button is highlighted; but according to Google, this is an accessibility feature, so I'm excluding this, but I'm keeping this for reference
+/*.alert:focus-visible {
+    outline: none;
+}*/
+
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color:brown;
+
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.input-section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 20px;
+
+}
+
+
+#input-squares {
+    width: 200px;
+    height: 22px;
+    color: brown;
+    font-size: 16px;
+    border-radius: 6px;
+    
+    
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    gap: 6px;
+    
+}
+
+
+#continue-button,
+#cancel-button {
+    font-size: 16px;
+    background-color: #3882F6;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    width: 160px;
+
+}
+
+
+.squares-container {
+    padding: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex: 1;
+    
+}
+
+.square {
+    border: 2px solid #6265F5;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    margin-top: auto;
+    height: 26px;
+    width: 100%;
+    background-color:burlywood;
+
+}
