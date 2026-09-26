@@ -7,6 +7,7 @@ const modalBox = document.getElementById("custom-modal");
 const inputSquares = document.getElementById("input-squares");
 const continueBtn = document.getElementById("continue-button");
 const cancelBtn = document.getElementById("cancel-button");
+let isDrawing = false;
 
 
 function createSquares(squaresSize) {
@@ -24,13 +25,20 @@ function createSquares(squaresSize) {
         eachSquare.style.aspectRatio = "1 / 1";
         squaresContainer.appendChild(eachSquare);
 
-        eachSquare.addEventListener('mouseenter', () => {
+        //only start drawing on mousedown
+        eachSquare.addEventListener('mousedown', (event) => {
+            event.preventDefault();
+            isDrawing = true;
             eachSquare.style.backgroundColor = createColorsHex();
-            
         });
 
 
-        
+        eachSquare.addEventListener('mouseenter', () => {
+            if (isDrawing) {
+                eachSquare.style.backgroundColor = createColorsHex();
+            }
+            
+        });
 
 
         eachSquare.addEventListener('click', () => {
@@ -64,6 +72,10 @@ function createColorsHex() {
 
 }
 
+//stop drawing on mouseup
+window.addEventListener('mouseup', () => {
+    isDrawing = false;
+});
 
 
 inputSquares.value = squaresSize;
