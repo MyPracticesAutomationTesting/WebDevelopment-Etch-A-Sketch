@@ -28,9 +28,11 @@ function createSquares(squaresSize) {
         //only start drawing on mousedown/touchstart
         eachSquare.addEventListener('pointerdown', (event) => {
             event.preventDefault();
+            event.target.releasePointerCapture(event.pointerId);   
             mousedownTouchstartActions(eachSquare);
 
         });
+
 
 
         eachSquare.addEventListener('pointerenter', () => {
