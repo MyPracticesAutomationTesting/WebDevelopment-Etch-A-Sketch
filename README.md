@@ -9,7 +9,7 @@ https://mypracticesautomationtesting.github.io/WebDevelopment-Etch-A-Sketch/
 
 40x40 squares seems to be a sweet spot for mobile, portrait view (below). For landscape, I still don't know how to make it work; my layout is still messy.
 
-![alt text](<mobile phone sketch 1.jpg>)
+<img src="mobile phone sketch 1.jpg" height="300">
 
-![alt text](<mobile phone sketch 2.jpg>)
+<img src="mobile phone sketch 2.jpg" height="300">
 
