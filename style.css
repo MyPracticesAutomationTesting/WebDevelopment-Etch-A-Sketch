@@ -13,37 +13,41 @@ body {
 }
 
 
-.button-container {
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    padding-bottom: 14px;
-    flex-wrap: wrap;
-}
-
-
 .heading {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
     text-align: center;
     color:blueviolet;
+    padding-top: 20px;
 
 }
 
 .heading-title {
     font-weight: bold;
     font-size: 20px;
+    padding-bottom: 10px;
 }
 
 
 .description {
     width: 380px;
 }
+
+
+.button-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+
 
 
 .change-number-squares,
@@ -152,14 +156,13 @@ body:has(dialog[open]) {
 
 .squares-container {
     padding: 20px;
-    padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    /*below is supposed to fix the squares to fit in landscape mode, but it still doesn't work*/
+    /*below is supposed to fix the squares to fit in mobile landscape mode, but it still doesn't work*/
     aspect-ratio: 1 /1;
     max-height: min(80svh, 100%);
     

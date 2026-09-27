@@ -29,11 +29,15 @@ function createSquares(squaresSize) {
         eachSquare.addEventListener('pointerdown', (event) => {
             event.preventDefault();
             event.target.releasePointerCapture(event.pointerId);   
-            mousedownTouchstartActions(eachSquare);
+            
+            if (eachSquare.style.backgroundColor !== '') {
+                eachSquare.style.backgroundColor = '';
+            }
+            else {
+                mousedownTouchstartActions(eachSquare);
+            }
 
         });
-
-
 
         eachSquare.addEventListener('pointerenter', () => {
             if (isDrawing) {
@@ -41,19 +45,6 @@ function createSquares(squaresSize) {
             }
             
         });
-
-        /*//for mobile /this is NOT needed anymore
-        eachSquare.addEventListener('touchstart', (event) => {
-            event.preventDefault();
-            mousedownTouchStartActions(eachSquare);
-
-        });*/
-
-
-        eachSquare.addEventListener('click', () => {
-            eachSquare.style.backgroundColor = '';
-        });
-
 
         buttonToClearColors.addEventListener('click', () => {
             eachSquare.style.backgroundColor = '';
@@ -91,11 +82,6 @@ function createColorsHex() {
 window.addEventListener('pointerup', () => {
     isDrawing = false;
 });
-
-//NOT needed anymore
-/*window.addEventListener('touchend', () => {
-    isDrawing = false;
-});*/
 
 
 inputSquares.value = squaresSize;
