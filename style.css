@@ -157,11 +157,11 @@ body:has(dialog[open]) {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /*max-width: 1200px;
-    width: 100%;*/
+    max-width: 1200px;
+    width: 100%;
     /*below fixes the squares to fit in landscape mode*/
-    width: 75vmin;
-    height: 75vmin;
+    aspect-ratio: 1 /1;
+    max-height: min(80svh, 100%);
     
 }
 
