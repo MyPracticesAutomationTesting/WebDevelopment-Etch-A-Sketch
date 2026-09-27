@@ -17,7 +17,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     padding-bottom: 14px;
 }
 
@@ -61,7 +62,6 @@ body {
 body:has(dialog[open]) {
     overflow: hidden;
 }
-
 
 
 .modal-box {
@@ -122,7 +122,6 @@ body:has(dialog[open]) {
     font-size: 16px;
     border-radius: 6px;
     
-    
 }
 
 
@@ -156,8 +155,9 @@ body:has(dialog[open]) {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 1200px;
-    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    /*flex: 1;*/
     
 }
 

@@ -28,8 +28,8 @@ function createSquares(squaresSize) {
         //only start drawing on mousedown
         eachSquare.addEventListener('mousedown', (event) => {
             event.preventDefault();
-            isDrawing = true;
-            eachSquare.style.backgroundColor = createColorsHex();
+            mousedownTouchStartActions(eachSquare);
+
         });
 
 
@@ -38,6 +38,13 @@ function createSquares(squaresSize) {
                 eachSquare.style.backgroundColor = createColorsHex();
             }
             
+        });
+
+        //for mobile
+        eachSquare.addEventListener('touchstart', (event) => {
+            event.preventDefault();
+            mousedownTouchStartActions(eachSquare);
+
         });
 
 
@@ -53,6 +60,12 @@ function createSquares(squaresSize) {
 
     }
 
+}
+
+
+function mousedownTouchStartActions(element) {
+    isDrawing = true;
+    element.style.backgroundColor = createColorsHex();
 }
 
 
@@ -74,6 +87,11 @@ function createColorsHex() {
 
 //stop drawing on mouseup
 window.addEventListener('mouseup', () => {
+    isDrawing = false;
+});
+
+
+window.addEventListener('touchend', () => {
     isDrawing = false;
 });
 
