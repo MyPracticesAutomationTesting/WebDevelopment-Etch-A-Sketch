@@ -25,27 +25,27 @@ function createSquares(squaresSize) {
         eachSquare.style.aspectRatio = "1 / 1";
         squaresContainer.appendChild(eachSquare);
 
-        //only start drawing on mousedown
-        eachSquare.addEventListener('mousedown', (event) => {
+        //only start drawing on mousedown/touchstart
+        eachSquare.addEventListener('pointerdown', (event) => {
             event.preventDefault();
-            mousedownTouchStartActions(eachSquare);
+            mousedownTouchstartActions(eachSquare);
 
         });
 
 
-        eachSquare.addEventListener('mouseenter', () => {
+        eachSquare.addEventListener('pointerenter', () => {
             if (isDrawing) {
                 eachSquare.style.backgroundColor = createColorsHex();
             }
             
         });
 
-        //for mobile
+        /*//for mobile /this is NOT needed anymore
         eachSquare.addEventListener('touchstart', (event) => {
             event.preventDefault();
             mousedownTouchStartActions(eachSquare);
 
-        });
+        });*/
 
 
         eachSquare.addEventListener('click', () => {
@@ -63,7 +63,7 @@ function createSquares(squaresSize) {
 }
 
 
-function mousedownTouchStartActions(element) {
+function mousedownTouchstartActions(element) {
     isDrawing = true;
     element.style.backgroundColor = createColorsHex();
 }
@@ -85,15 +85,15 @@ function createColorsHex() {
 
 }
 
-//stop drawing on mouseup
-window.addEventListener('mouseup', () => {
+//stop drawing on mouseup/touchend
+window.addEventListener('pointerup', () => {
     isDrawing = false;
 });
 
-
-window.addEventListener('touchend', () => {
+//NOT needed anymore
+/*window.addEventListener('touchend', () => {
     isDrawing = false;
-});
+});*/
 
 
 inputSquares.value = squaresSize;

@@ -20,6 +20,7 @@ body {
     max-width: 1200px;
     width: 100%;
     padding-bottom: 14px;
+    flex-wrap: wrap;
 }
 
 
