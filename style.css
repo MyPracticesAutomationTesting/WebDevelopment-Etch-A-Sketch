@@ -166,6 +166,7 @@ body:has(dialog[open]) {
     border: 2px solid #6265F5;
     border-radius: 8px;
     box-sizing: border-box;
+    touch-action: none;
 
 }
 
