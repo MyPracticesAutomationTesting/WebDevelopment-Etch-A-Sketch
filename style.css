@@ -159,7 +159,7 @@ body:has(dialog[open]) {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    /*below fixes the squares to fit in landscape mode*/
+    /*below is supposed to fix the squares to fit in landscape mode, but it still doesn't work*/
     aspect-ratio: 1 /1;
     max-height: min(80svh, 100%);
     
